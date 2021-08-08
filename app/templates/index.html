@@ -1,1 +1,16 @@
-<h2>Hello</h2>
+{% import 'macros.html' as macro%}
+<h1>Welcome to Myner News</h1>
+<h2><i>Categories</i></h2>
+<div id="business">
+    <h3>Business</h3>
+    <ul>
+        {{ macro.displaySources(business) }}
+    </ul>
+</div>
+
+<div id="sports">
+    <h3>Sports</h3>
+    <ul>
+        {{ macro.displaySources(sports) }}
+    </ul>
+</div>
