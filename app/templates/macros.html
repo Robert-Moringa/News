@@ -13,3 +13,20 @@
     {% endfor %}
 
 {% endmacro %}
+
+{% macro displaySources(tech) %}
+
+    {% for tec in tech %}
+        <li>{{ tech.name}}</li>
+    {% endfor %}
+
+{% endmacro %}
+
+
+{% macro displaySources(general) %}
+
+    {% for gen in general %}
+        <li>{{ gen.name}}</li>
+    {% endfor %}
+
+{% endmacro %}
