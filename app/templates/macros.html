@@ -30,3 +30,19 @@
     {% endfor %}
 
 {% endmacro %}
+
+{% macro displaySources(health) %}
+
+    {% for heal in health %}
+        <li>{{ heal.name}}</li>
+    {% endfor %}
+
+{% endmacro %}
+
+{% macro displaySources(science) %}
+
+    {% for sci in science %}
+        <li>{{ sci.name}}</li>
+    {% endfor %}
+
+{% endmacro %}
