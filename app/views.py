@@ -15,4 +15,4 @@ def index():
     tech = getNews_sources('technology')
     entertainment = getNews_sources('entertainment')
 
-    return render_template('index.html', business = business, sports = sports )
+    return render_template('index.html', business = business, sports = sports, tech = tech, entertainment = entertainment )
