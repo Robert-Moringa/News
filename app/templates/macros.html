@@ -1,7 +1,7 @@
 {% macro displaySources(business) %}
 
     {% for business in business %}
-        <li>{{ business.name}}</li>
+        <li><a href="business.url"> {{ business.name }} </a></li>
     {% endfor %}
 
 {% endmacro %}
@@ -9,7 +9,7 @@
 {% macro displaySources(sports) %}
 
     {% for sport in sports %}
-        <li>{{ sport.name}}</li>
+        <li><a href="sport.url">{{ sport.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}
@@ -17,7 +17,7 @@
 {% macro displaySources(tech) %}
 
     {% for tec in tech %}
-        <li>{{ tech.name}}</li>
+        <li><a href="tech.url">{{ tech.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}
@@ -26,7 +26,7 @@
 {% macro displaySources(general) %}
 
     {% for gen in general %}
-        <li>{{ gen.name}}</li>
+        <li><a href="gen.url">{{ gen.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}
@@ -34,7 +34,7 @@
 {% macro displaySources(health) %}
 
     {% for heal in health %}
-        <li>{{ heal.name}}</li>
+        <li><a href="heal.url">{{ heal.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}
@@ -42,7 +42,7 @@
 {% macro displaySources(science) %}
 
     {% for sci in science %}
-        <li>{{ sci.name}}</li>
+        <li><a href="sci.url">{{ sci.name}}</a></li>
     {% endfor %}
 
 {% endmacro %}

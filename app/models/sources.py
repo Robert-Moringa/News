@@ -8,3 +8,8 @@ class Source:
         self.description = description
         self.url = url
         self.category = category
+
+class Articles:
+    '''
+    This is an articles class to define articles class objects
+    '''
