@@ -24,82 +24,111 @@
 </div>
 
 
-<div id="business">
-    <h3>Business</h3>
-    {% for business in business%}
-        
-        <div id="business">
-            <a href="{{business.url}}" class="name">{{business.name}}</a>
-            <p> {{business.description}} </p>
-            <a href="/articles/{{business.id}}" class="articles">View {{business.name}} articles</a>
+<div id="source-category">
+    <h3 class="category-name">Business Sources</h3>
+    <div class="row">
+        {% for business in business%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{business.url}}" class="source-name">{{business.name}}</a></h4>
+                <p class="source-description"> {{business.description |truncate(118)}} </p>
+                <a href="/articles/{{business.id}}" class="source-articles"><button>View {{business.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
-<div id="sports">
-    <h3>Sport News</h3>
-    {% for sport in sports%}
-        
-        <div id="">
-            <a href="{{sport.url}}" class="name">{{sport.name}}</a>
-            <p> {{sport.description}} </p>
-            <a href="/articles/{{sport.id}}" class="articles">View {{sport.name}} articles</a>
+
+<div id="source-category">
+    <h3 class="category-name">Sports Sources</h3>
+    <div class="row">
+        {% for sport in sports%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{sport.url}}" class="source-name">{{sport.name}}</a></h4>
+                <p class="source-description"> {{sport.description |truncate(118)}} </p>
+                <a href="/articles/{{sport.id}}" class="source-articles"><button>View {{sport.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
-<div id="general">
-    <h3>General</h3>
-    {% for gen in general%}
-        
-        <div id="">
-            <a href="{{gen.url}}" class="name">{{gen.name}}</a>
-            <p> {{gen.description}} </p>
-            <a href="/articles/{{gen.id}}" class="articles">View {{gen.name}} articles</a>
+
+<div id="source-category">
+    <h3 class="category-name">General Sources</h3>
+    <div class="row">
+        {% for gen in general%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{gen.url}}" class="source-name">{{gen.name}}</a></h4>
+                <p class="source-description"> {{gen.description |truncate(118)}} </p>
+                <a href="/articles/{{gen.id}}" class="source-articles"><button>View {{gen.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
-<div id="health">
-    <h3>Health</h3>
-    {% for heal in health%}
-        
-        <div id="">
-            <a href="{{heal.url}}" class="name">{{heal.name}}</a>
-            <p> {{heal.description}} </p>
-            <a href="/articles/{{heal.id}}" class="articles">View {{heal.name}} articles</a>
+
+<div id="source-category">
+    <h3 class="category-name">Health Sources</h3>
+    <div class="row">
+        {% for heal in health%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{heal.url}}" class="source-name">{{heal.name}}</a></h4>
+                <p class="source-description"> {{heal.description |truncate(118)}} </p>
+                <a href="/articles/{{heal.id}}" class="source-articles"><button>View {{heal.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
-<div id="tech">
-    <h3>Technology</h3>
-    {% for tec in tech%}
-        
-        <div id="">
-            <a href="{{tec.url}}" class="name">{{tec.name}}</a>
-            <p> {{tec.description}} </p>
-            <a href="/articles/{{tec.id}}" class="articles">View {{tec.name}} articles</a>
+
+<div id="source-category">
+    <h3 class="category-name">Technology Sources</h3>
+    <div class="row">
+        {% for tec in tech%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{tec.url}}" class="source-name">{{tec.name}}</a></h4>
+                <p class="source-description"> {{tec.description |truncate(118)}} </p>
+                <a href="/articles/{{tec.id}}" class="source-articles"><button>View {{tec.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
-<div id="sci">
-    <h3>Science News</h3>
-    {% for sci in science%}
-        
-        <div id="">
-            <a href="{{sci.url}}" class="name">{{sci.name}}</a>
-            <p> {{sci.description}} </p>
-            <a href="/articles/{{sci.id}}" class="articles">View {{sci.name}} articles</a>
+
+<div id="source-category">
+    <h3 class="category-name">Science Sources</h3>
+    <div class="row">
+        {% for sci in science%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <h4><a href="{{sci.url}}" class="source-name">{{sci.name}}</a></h4>
+                <p class="source-description"> {{sci.description |truncate(118)}} </p>
+                <a href="/articles/{{sci.id}}" class="source-articles"><button>View {{sci.name}} Articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
 
