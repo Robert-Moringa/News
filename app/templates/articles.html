@@ -1,1 +1,12 @@
 <h1>We have our articles here</h1>
+
+
+{% for article in articles%}
+    <div id="articles">
+        <h4> {{article.title}} </h4>
+        <img src="{{ article.image}}" alt="" width="10%">
+        <p> Published at: {{article.date}}</p>
+        <p> {{article.description}} </p>
+    </div>
+    
+{% endfor %}

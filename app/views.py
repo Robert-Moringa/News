@@ -26,6 +26,6 @@ def articles(id):
 	'''
 	view articles page
 	'''
-	id = get_articles(id)
+	articles = get_articles(id)
 
 	return render_template('articles.html', articles = articles)
