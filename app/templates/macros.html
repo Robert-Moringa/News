@@ -1,7 +1,8 @@
 {% macro displaySources(business) %}
 
     {% for business in business %}
-        <li><a href="business.url"> {{ business.name }} </a></li>
+        <li><a href="/articles/{{business.id}}"> {{ business.name }} </a></li>
+        <p> id {{business.id}} </p>
     {% endfor %}
 
 {% endmacro %}
