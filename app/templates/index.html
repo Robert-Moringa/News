@@ -1,140 +1,105 @@
-{% extends 'base.html'%}
-<div id="entertainment">
-    <h3>Entertainment</h3>
-    {% for ent in entertainment%}
-        
-        <div id="">
-            <a href="{{ent.url}}" class="name">{{ent.name}}</a>
-            <p> {{ent.description}} </p>
-            <a href="/articles/{{ent.id}}" class="articles">View {{ent.name}} articles</a>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     
-   {% endfor %}
-</div>
-
-
-<div id="business">
-    <h3>Business</h3>
-    {% for business in business%}
+    <div id="entertainment">
+        <h3>Entertainment</h3>
+        {% for ent in entertainment%}
+            
+            <div id="">
+                <a href="{{ent.url}}" class="name">{{ent.name}}</a>
+                <p> {{ent.description}} </p>
+                <a href="/articles/{{ent.id}}" class="articles">View {{ent.name}} articles</a>
+            </div>
         
-        <div id="business">
-            <a href="{{business.url}}" class="name">{{business.name}}</a>
-            <p> {{business.description}} </p>
-            <a href="/articles/{{business.id}}" class="articles">View {{business.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-<div id="sports">
-    <h3>Sport News</h3>
-    {% for sport in sports%}
+    
+    <div id="business">
+        <h3>Business</h3>
+        {% for business in business%}
+            
+            <div id="business">
+                <a href="{{business.url}}" class="name">{{business.name}}</a>
+                <p> {{business.description}} </p>
+                <a href="/articles/{{business.id}}" class="articles">View {{business.name}} articles</a>
+            </div>
         
-        <div id="">
-            <a href="{{sport.url}}" class="name">{{sport.name}}</a>
-            <p> {{sport.description}} </p>
-            <a href="/articles/{{sport.id}}" class="articles">View {{sport.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-<div id="general">
-    <h3>General</h3>
-    {% for gen in general%}
+    <div id="sports">
+        <h3>Sport News</h3>
+        {% for sport in sports%}
+            
+            <div id="">
+                <a href="{{sport.url}}" class="name">{{sport.name}}</a>
+                <p> {{sport.description}} </p>
+                <a href="/articles/{{sport.id}}" class="articles">View {{sport.name}} articles</a>
+            </div>
         
-        <div id="">
-            <a href="{{gen.url}}" class="name">{{gen.name}}</a>
-            <p> {{gen.description}} </p>
-            <a href="/articles/{{gen.id}}" class="articles">View {{gen.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-<div id="health">
-    <h3>Health</h3>
-    {% for heal in health%}
+    <div id="general">
+        <h3>General</h3>
+        {% for gen in general%}
+            
+            <div id="">
+                <a href="{{gen.url}}" class="name">{{gen.name}}</a>
+                <p> {{gen.description}} </p>
+                <a href="/articles/{{gen.id}}" class="articles">View {{gen.name}} articles</a>
+            </div>
         
-        <div id="">
-            <a href="{{heal.url}}" class="name">{{heal.name}}</a>
-            <p> {{heal.description}} </p>
-            <a href="/articles/{{heal.id}}" class="articles">View {{heal.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-<div id="tech">
-    <h3>Technology</h3>
-    {% for tec in tech%}
+    <div id="health">
+        <h3>Health</h3>
+        {% for heal in health%}
+            
+            <div id="">
+                <a href="{{heal.url}}" class="name">{{heal.name}}</a>
+                <p> {{heal.description}} </p>
+                <a href="/articles/{{heal.id}}" class="articles">View {{heal.name}} articles</a>
+            </div>
         
-        <div id="">
-            <a href="{{tec.url}}" class="name">{{tec.name}}</a>
-            <p> {{tec.description}} </p>
-            <a href="/articles/{{tec.id}}" class="articles">View {{tec.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-<div id="sci">
-    <h3>Science News</h3>
-    {% for sci in science%}
+    <div id="tech">
+        <h3>Technology</h3>
+        {% for tec in tech%}
+            
+            <div id="">
+                <a href="{{tec.url}}" class="name">{{tec.name}}</a>
+                <p> {{tec.description}} </p>
+                <a href="/articles/{{tec.id}}" class="articles">View {{tec.name}} articles</a>
+            </div>
         
-        <div id="">
-            <a href="{{sci.url}}" class="name">{{sci.name}}</a>
-            <p> {{sci.description}} </p>
-            <a href="/articles/{{sci.id}}" class="articles">View {{sci.name}} articles</a>
-        </div>
+       {% endfor %}
+    </div>
     
-   {% endfor %}
-</div>
-
-
-
-<!-- {% import 'macros.html' as macro%}
-<h1>Welcome to Myner News</h1>
-<h2><i>Categories</i></h2>
-<div id="business">
-    <h3>Business</h3>
-    <ul>
-        {{ macro.displaySources(business) }}
-        <p> hsuhdi </p>
-    </ul>
-</div>
-
-<div id="sports">
-    <h3>Sports</h3>
-    <ul>
-        {{ macro.displaySources(sports) }}
-    </ul>
-</div>
-
-<div id="tech">
-    <h3>Technology</h3>
-    <ul>
-        {{ macro.displaySources(tech) }}
-    </ul>
-</div>
-
-<div id="general">
-    <h3>General News</h3>
-    <ul>
-        {{ macro.displaySources(general) }}
-    </ul>
-</div>
-
-<div id="science">
-    <h3>Science</h3>
-    <ul>
-        {{ macro.displaySources(science) }}
-    </ul>
-</div>
-
-<div id="health">
-    <h3>Health</h3>
-    <ul>
-        {{ macro.displaySources(health) }}
-    </ul>
-</div> -->
+    <div id="sci">
+        <h3>Science News</h3>
+        {% for sci in science%}
+            
+            <div id="">
+                <a href="{{sci.url}}" class="name">{{sci.name}}</a>
+                <p> {{sci.description}} </p>
+                <a href="/articles/{{sci.id}}" class="articles">View {{sci.name}} articles</a>
+            </div>
+        
+       {% endfor %}
+    </div>
+    
+</body>
+</html>
