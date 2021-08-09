@@ -1,5 +1,8 @@
-<h1>We have our articles here</h1>
+{% extends 'base.html'%}
 
+{% block content %}
+
+<h1>We have our articles here</h1>
 
 {% for article in articles%}
     <div id="articles">
@@ -10,3 +13,6 @@
     </div>
     
 {% endfor %}
+
+{% endblock%}
+
