@@ -48,3 +48,47 @@
     border-radius: 5px;
     margin-bottom: 2px;
 }
+
+/* article.html */
+.article{
+    border: 2px solid rgba(0, 99, 93, 1) ;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 2%;
+    height: 450px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+.article-title{
+    color: rgba(0, 99, 93, 1);
+}
+
+.article-description{
+    color: rgba(71, 44, 27, 0.8);
+}
+
+.article-button{
+    background-color: rgba(0, 99, 93, 1) ;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+
+.article-readmore{
+    color: rgba(236, 254, 232, 1);
+    text-align: center;
+}
+.article-date{
+    color: rgba(71, 44, 27, 0.8);
+    text-decoration: italic;
+    font-size: 70%;
+}
+
+.title{
+    font-family: 'Rancho', cursive;
+    text-align: center;
+    color: rgba(71, 44, 27, 1);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(187, 159, 6, 1)
+}

@@ -1,18 +1,27 @@
 {% extends 'base.html'%}
 
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{% endblock %}
+
 {% block content %}
 
-<h1>We have our articles here</h1>
+<h1 class="title">We have our articles here</h1>
 
-{% for article in articles%}
-    <div id="articles">
-        <h4> {{article.title}} </h4>
-        <img src="{{ article.image}}" alt="" width="10%">
-        <p> Published at: {{article.date}}</p>
-        <p> {{article.description |truncate(70)}} </p>
+<div class="row">
+    
+    {% for article in articles%}
+    <div class="col-md-4 article">
+        <h4 class="article-title"> {{article.title}} </h4>
+        <img src="{{ article.image}}" alt="" width="90%">
+        <p class="article-description"> {{article.description |truncate(150)}} </p>
+        <button class="article-button"><a href="{{article.url}}" class="article-readmore">Read the full article</a></button>
+        <p class="article-date"> <i>Published at: {{article.date}}</i></p>
     </div>
     
-{% endfor %}
+    {% endfor %}
+</div>
 
 {% endblock%}
 
