@@ -17,15 +17,15 @@ def index():
     science = getNews_sources('science')
     health = getNews_sources('health')
     
-
+    print(general)
 
     return render_template('index.html', health = health, science = science, business = business, sports = sports, tech = tech, entertainment = entertainment , general = general)
 
-@app.route('/sources/<id>')
+@app.route('/articles/<id>')
 def articles(id):
 	'''
 	view articles page
 	'''
-	articles = get_articles(id)
+	id = get_articles(id)
 
 	return render_template('articles.html', articles = articles)
