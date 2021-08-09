@@ -6,17 +6,21 @@
 {% endblock %}
 
 {% block content %}
-<div id="entertainment">
-    <h3>Entertainment</h3>
-    {% for ent in entertainment%}
-        
-        <div class="source-card">
-            <a href="{{ent.url}}" class="source-name">{{ent.name}}</a>
-            <p class="source-description"> {{ent.description}} </p>
-            <a href="/articles/{{ent.id}}" class="articles">View {{ent.name}} articles</a>
+<div id="source-category">
+    <h3 class="category-name">Entertainment</h3>
+    <div class="row">
+        {% for ent in entertainment%}
+        <div class="col-md-3">
+            
+            <div class="source-card">
+                <a href="{{ent.url}}" class="source-name"><h4>{{ent.name}}</h4></a>
+                <p class="source-description"> {{ent.description}} </p>
+                <a href="/articles/{{ent.id}}" class="source-articles"><button>View {{ent.name}} articles</button></a>
+            </div>
+            
         </div>
-    
-   {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 
 
